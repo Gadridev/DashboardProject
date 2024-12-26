@@ -6,6 +6,11 @@ import { InvoicesTableSkeleton } from "@/app/ui/skeletons";
 import { Suspense } from "react";
 import { lusitana } from "@/app/ui/font";
 import { fetchInvoicesPages } from "@/app/lib/data";
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Invoices | Acme Dashboard',
+};
 export default async function InvoicesPage(props: {
   SearchParams?: Promise<{
     query?: string;
